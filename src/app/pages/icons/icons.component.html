@@ -1,0 +1,59 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <!-- Card stats -->
+      <div class="row">
+    
+   
+    
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Page content -->
+<div class="container-fluid mt--7">
+  <!-- Table -->
+  <div class="row">
+    <div class="col">
+      <div class="card shadow">
+        <div class="card-header bg-transparent">
+          <h3 class="mb-0">Chesta Detect</h3>
+        </div>
+        <div class="card-body">
+          <div class="mainContainer">
+            <div class="content">
+                <div class="row margin25">
+          
+                    <div class="col-md-4">
+          
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span  class="btn btn-info"(click)="upload()"id="btnUpload">Predict</span>
+                            </div>
+                            <div class="custom-file">
+                                <form action="/api/upload" method="post" enctype="multipart/form-data">
+                                  <input  (change)="fileChange($event)"  type="file"  class="custom-file-input" name="upload">
+                                  <br><br> <h5>{{etat}}</h5>
+                                </form>
+                                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span>
+                     <br> <img [src]="image" alt="Trulli" width="500" height="300">
+                    </span>
+                   
+                    <div class="col-md-4">
+          
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

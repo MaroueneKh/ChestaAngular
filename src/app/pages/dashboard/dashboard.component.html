@@ -1,0 +1,90 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <!-- Card stats -->
+      <div class="row">
+      </div>
+    </div>
+  </div>
+</div>
+<tr>
+
+<th>
+<div class="container-fluid mt--7"  id="div1">
+  <div class="row">
+    <div class="col-xl-8 mb-5 mb-xl-0">
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-xl-8 mb-5 mb-xl-0">
+      <div class="card shadow">
+        <div class="card-header border-0">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class="mb-0">Mes Patients</h3>
+            </div>
+            <div class="col text-right">
+              <a href="#!" class="btn btn-sm btn-primary">See all</a>
+            </div>
+          </div>
+        </div>
+          <!-- Projects table -->
+          <table class="table table-hover table-fixed">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Nom </th>
+                <th scope="col">Prenom</th>
+                <th scope="col">Nombre de visite</th>
+                <th scope="col">Dernière consultation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let patient of patients" (click)="test(patient.nom,patient.prenom,patient._id)">
+                <th scope="row">
+                {{patient.nom}} 
+                </th>
+                <td>
+                {{patient.prenom}} 
+                </td>
+                <td>
+                 3
+                </td>
+                <td>
+                  12/02/202O 
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</th>
+<th>
+<div class="container-fluid mt--7"  id="div2"  [hidden] = "Show">
+  <div class="row">
+    <div class="col-xl-8 mb-5 mb-xl-0">
+    
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-xl-8 mb-5 mb-xl-0">
+        <div class="card" style="width: 18rem;" id="carte1">
+      
+          <img id="image" class="card-img-top" src="assets/img/theme/23_avatar__woman_user-512.png" alt="Card image cap">
+            <a [routerLink]="['/profil-patient/',id]" routerLinkActive="active" class="card-title" id="nom" >{{nom}} {{prenom}}</a>
+            <a [routerLink]="['/profil-patient/',id]" routerLinkActive="active" class="card-title" id="suivi" >Suivi hebdomadaire</a>
+            <span id="date"> <h5> {{date}} </h5> </span>
+           <br><span id="rapport"> <h5> {{rapport}}</h5> </span>
+            <br> <span id="detection"> <h5>  {{detection}}  </h5>  </span>
+
+           <br> <a routerLink="/user-profile" routerLinkActive="active" class="btn btn-primary">Ne plus suivre</a>
+          
+        </div>
+    </div>
+  </div>
+</div>
+</th>
+</tr>
