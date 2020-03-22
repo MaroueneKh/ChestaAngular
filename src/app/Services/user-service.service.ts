@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { User } from '../models/user.model';
 import { Observable } from 'rxjs';
 
@@ -25,10 +25,10 @@ getAllProducts(): Observable<User[]>
     .pipe()
 }
 
-/* getProduitById(id): Observable<Produit>
+getUserId(id): Observable<User>
 {
-  return this.http
-    .get<Produit>(this.base_path+"/selectById?id="+id, this.httpOptions)
-    .pipe()
-} */
+  const  params = new  HttpParams().set('idmedecin',id);
+  return this.http.get<User>(this.base_path+"/user/GetUserByID", {params}).pipe();
+}
+
 }

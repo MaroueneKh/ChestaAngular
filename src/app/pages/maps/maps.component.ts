@@ -22,7 +22,9 @@ export class MapsComponent implements OnInit {
     this.UserServ.getAllProducts().subscribe(response => {
       this.Medecins = response ;
     })
-    //get medecins list
   }
-
+//go to details
+public gotodetails(id: string) {
+  this.router.navigateByUrl("/detailmedecin/"+id);
+}
 }

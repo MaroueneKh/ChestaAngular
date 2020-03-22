@@ -39,7 +39,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let user of Medecins" >
+              <tr *ngFor="let user of Medecins" (click)='gotodetails(user._id)' >
                 <th scope="row">
                 {{user.email}}
                 </th>
@@ -53,7 +53,10 @@
                   {{user.prenom}}
                 </td>
                 <td>
-                  <a routerLink="/detailmedecin" routerLinkActive="active">Rendez Vous</a>
+
+                  <a [routerLink]="['/profil-patient/']" routerLinkActive="active" class="card-title" id="nom" ></a>
+
+                  <router-outlet></router-outlet>
                 </td>
               </tr>
             </tbody>

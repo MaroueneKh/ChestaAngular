@@ -7,7 +7,7 @@ import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component
 import { DetailMedecinComponent } from './pages/detail-medecin/detail-medecin.component';
 
 const routes: Routes =[
-  { path: 'detailmedecin', component: DetailMedecinComponent },
+  { path: 'detailmedecin/:id', component: DetailMedecinComponent },
   {
     path: '',
     redirectTo: 'dashboard',
