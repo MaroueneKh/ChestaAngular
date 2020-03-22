@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { User } from 'src/app/Models/user.model';
-import { UserServiceService } from 'src/app/Services/user-service.service';
+import { User } from '../Models/user.model';
+import { UserServiceService } from '../Services/user-service.service';
 
 @Component({
-  selector: 'app-maps',
-  templateUrl: './maps.component.html',
-  styleUrls: ['./maps.component.scss']
+  selector: 'app-liste-medecins',
+  templateUrl: './liste-medecins.component.html',
+  styleUrls: ['./liste-medecins.component.scss']
 })
-export class MapsComponent implements OnInit {
-
+export class ListeMedecinsComponent implements OnInit {
   Medecins: User[] = [];
   constructor( private route: ActivatedRoute,
     private UserServ: UserServiceService,

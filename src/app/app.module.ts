@@ -13,6 +13,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { HistoriquePatientsComponent } from './pages/historique-patients/historique-patients.component';
+import { ListeMedecinsComponent } from './liste-medecins/liste-medecins.component';
+import { DetailMedecinComponent } from './pages/detail-medecin/detail-medecin.component';
 
 
 @NgModule({
@@ -30,6 +32,8 @@ import { HistoriquePatientsComponent } from './pages/historique-patients/histori
     AdminLayoutComponent,
     AuthLayoutComponent,
     HistoriquePatientsComponent,
+    ListeMedecinsComponent,
+    DetailMedecinComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
